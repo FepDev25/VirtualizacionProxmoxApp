@@ -1,53 +1,49 @@
 /* Estilos para la barra de navegación */
-.navbar {
+nav {
   background-color: #007bff; /* Azul primario */
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px; /* Padding horizontal, sin padding vertical para que los items lo definan */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex; /* Para alinear el logo y la lista si se añade un logo después */
+  justify-content: center; /* Centra la lista de navegación si es el único elemento */
 }
 
-.nav-list {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centra los elementos de la lista */
+  overflow: hidden; /* Para contener los floats si se usaran, aunque flex es mejor */
 }
 
-.nav-item {
-  margin: 0 15px; /* Espacio entre elementos de la navegación */
+nav ul li {
+  margin: 0; /* Sin margen entre items, el padding en 'a' lo maneja */
 }
 
-.nav-item a {
-  text-decoration: none;
+nav ul li a {
+  display: block;
   color: white;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
+  text-align: center;
+  padding: 14px 20px; /* Buen padding para hacerlos clickeables */
+  text-decoration: none;
+  font-weight: 500; /* Un poco más de peso */
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 3px solid transparent; /* Espacio para borde activo */
 }
 
-.nav-item a:hover {
+nav ul li a:hover {
   background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
-  color: #e0e0e0; /* Color de texto ligeramente más claro */
+  color: #e9ecef;
 }
 
-.nav-item a.active {
-  background-color: #004085; /* Azul aún más oscuro para el enlace activo */
+nav ul li a.active-link {
+  background-color: #0056b3; /* Mismo que hover para consistencia */
   color: #ffffff;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 700; /* Más peso para el activo */
+  border-bottom: 3px solid #fd7e14; /* Acento naranja deportivo */
 }
 
-/* Estilos para el contenedor principal del contenido */
-.container {
-  padding: 20px;
-  margin-top: 20px; /* Espacio para que el contenido no quede debajo de la navbar fija */
-  background-color: #f0f8ff; /* Azul muy claro de fondo para el área de contenido */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo deportivo general para los encabezados dentro de los componentes */
-h1, h2, h3, h4, h5, h6 {
-  color: #003366; /* Azul oscuro para los encabezados */
-  font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+/* Contenedor principal del contenido de router-outlet */
+.page-container { /* Renombrado de .container para evitar colisiones si Bootstrap u otro framework se usa */
+  padding: 25px;
+  margin-top: 10px; /* Un pequeño margen superior */
 }

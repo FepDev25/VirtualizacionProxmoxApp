@@ -11,5 +11,6 @@ export const routes: Routes = [
   { path: 'jugador', component: JugadorComponent },
   { path: 'pais', component: PaisComponent },
   { path: 'posicion', component: PosicionComponent },
-  { path: '', redirectTo: '/jugador', pathMatch: 'full' } // Ruta por defecto
+  { path: '', redirectTo: '/jugador', pathMatch: 'full' }, // Ruta por defecto
+  { path: '**', redirectTo: '/jugador' } // Wildcard para rutas no encontradas
 ];
