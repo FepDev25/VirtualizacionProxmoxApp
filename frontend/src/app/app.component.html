@@ -1,13 +1,30 @@
-<nav>
-  <ul>
-    <li><a routerLink="/dt" routerLinkActive="active-link">Directores Técnicos</a></li>
-    <li><a routerLink="/equipo" routerLinkActive="active-link">Equipos</a></li>
-    <li><a routerLink="/jugador" routerLinkActive="active-link">Jugadores</a></li>
-    <li><a routerLink="/pais" routerLinkActive="active-link">Países</a></li>
-    <li><a routerLink="/posicion" routerLinkActive="active-link">Posiciones</a></li>
+<!-- NAVBAR -->
+<nav class="bg-blue-100 shadow-md">
+  <ul class="flex justify-center space-x-6 p-4">
+    <li>
+      <a routerLink="/dt" routerLinkActive="text-blue-700 font-bold border-b-2 border-blue-500"
+         class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Directores Técnicos</a>
+    </li>
+    <li>
+      <a routerLink="/equipo" routerLinkActive="text-blue-700 font-bold border-b-2 border-blue-500"
+         class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Equipos</a>
+    </li>
+    <li>
+      <a routerLink="/jugador" routerLinkActive="text-blue-700 font-bold border-b-2 border-blue-500"
+         class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Jugadores</a>
+    </li>
+    <li>
+      <a routerLink="/pais" routerLinkActive="text-blue-700 font-bold border-b-2 border-blue-500"
+         class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Países</a>
+    </li>
+    <li>
+      <a routerLink="/posicion" routerLinkActive="text-blue-700 font-bold border-b-2 border-blue-500"
+         class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Posiciones</a>
+    </li>
   </ul>
 </nav>
 
-<div class="page-container">
+<!-- CONTENEDOR DE PÁGINA -->
+<div class="page-container p-6 max-w-5xl mx-auto">
   <router-outlet></router-outlet>
 </div>

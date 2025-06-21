@@ -1,1 +1,35 @@
-<p>posicion works!</p>
+<h2 class="text-2xl font-semibold text-blue-700 mb-4">Gestión de Posiciones</h2>
+
+<form (ngSubmit)="guardarPosicion()" class="bg-blue-50 p-6 rounded-xl shadow-md space-y-4 mb-6">
+  <div>
+    <label for="nombre" class="block text-blue-800 font-medium mb-1">Nombre de la posición:</label>
+    <input type="text"
+           id="nombre"
+           name="nombre"
+           [(ngModel)]="nuevaPosicion.nombre"
+           required
+           class="w-full px-4 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring focus:ring-blue-300" />
+  </div>
+
+  <button type="submit"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md transition">
+    Guardar
+  </button>
+</form>
+
+<!-- TABLA DE POSICIONES -->
+<table *ngIf="posiciones.length > 0"
+       class="w-full border border-blue-200 rounded-lg overflow-hidden shadow-sm text-sm bg-white">
+  <thead class="bg-blue-100 text-blue-900 font-semibold">
+    <tr>
+      <th class="px-4 py-2 border">ID</th>
+      <th class="px-4 py-2 border">Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let posicion of posiciones" class="hover:bg-blue-50">
+      <td class="px-4 py-2 border text-center">{{ posicion.id }}</td>
+      <td class="px-4 py-2 border">{{ posicion.nombre }}</td>
+    </tr>
+  </tbody>
+</table>
