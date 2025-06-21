@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #e9ecef; /* Un gris azulado muy claro para el fondo general */
+  color: #333; /* Color de texto principal */
+}
+
+a {
+  color: #007bff; /* Azul estándar para enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3; /* Azul más oscuro al pasar el mouse sobre enlaces */
+  text-decoration: underline;
+}
+
+/* Estilos para botones con un toque deportivo */
+button, .btn {
+  background-color: #007bff; /* Azul primario */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+  transform: translateY(-2px); /* Efecto ligero de elevación */
+}
+
+button:active, .btn:active {
+  background-color: #004085; /* Azul aún más oscuro */
+  transform: translateY(0);
+}
+
+/* Estilos para inputs y textareas */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: calc(100% - 22px); /* Ajustar el ancho considerando el padding y borde */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da; /* Borde gris claro */
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff; /* Borde azul al enfocar */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra de foco azulada */
+}
+
+/* Contenedor general para las vistas de componentes para darles un aspecto de "tarjeta" */
+.component-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.component-card h2 {
+  color: #0056b3; /* Azul oscuro para títulos de tarjeta */
+  border-bottom: 2px solid #007bff; /* Línea inferior azul */
+  padding-bottom: 10px;
+  margin-top: 0;
+}
