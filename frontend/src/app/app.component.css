@@ -1,0 +1,53 @@
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #007bff; /* Azul primario */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra los elementos de la lista */
+}
+
+.nav-item {
+  margin: 0 15px; /* Espacio entre elementos de la navegación */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  color: #e0e0e0; /* Color de texto ligeramente más claro */
+}
+
+.nav-item a.active {
+  background-color: #004085; /* Azul aún más oscuro para el enlace activo */
+  color: #ffffff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenedor principal del contenido */
+.container {
+  padding: 20px;
+  margin-top: 20px; /* Espacio para que el contenido no quede debajo de la navbar fija */
+  background-color: #f0f8ff; /* Azul muy claro de fondo para el área de contenido */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo deportivo general para los encabezados dentro de los componentes */
+h1, h2, h3, h4, h5, h6 {
+  color: #003366; /* Azul oscuro para los encabezados */
+  font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+}
